@@ -1,0 +1,7 @@
+CREATE DATABASE CHEESECAKE;
+USE CHEESECAKE;
+create table ORDERS (ORDERID INTEGER, MONTH CHAR(3), DAY INTEGER, QUANTITY INTEGER, TOPPING ENUM('Cherry', 'Chocolate', 'Plain'), NOTES TEXT(512));
+DESCRIBE ORDERS;
+select * from ORDERS;
+select * from ORDERS where 'FEB' like MONTH and 'Plain' like TOPPING;
+insert into ORDERS values(62, "SEP", 21, 2, "Cherry", "Hello World");
